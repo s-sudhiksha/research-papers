@@ -1,2 +1,2 @@
 # research-papers
-My research work on data structures and optimization
+Research on linked list operations and optimization in C — cache efficiency, batch processing, and memory management.
