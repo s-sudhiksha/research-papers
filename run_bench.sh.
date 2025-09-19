@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -e
+CODE_DIR=Code
+RESULTS=Results/performance_tables.csv
+mkdir -p "$CODE_DIR" Results
+cd "$CODE_DIR"
+make
+cd ..
+
+echo "size,impl,insert_ms,traverse_ms,search_ms,mem_kb,majflt,minflt" > "$RESULTS"
+
+SIZES=(100 1000 10000 100000)
+
+for s in "${SIZES[@]}"; do
+  echo "Running size $s (standard)"
+  out=$(./Code/standard $s)
+  echo "$s,standard,$out" >> "$RESULTS"
+
+  echo "Running size $s (cache)"
+  out=$(./Code/cache $s)
+  echo "$s,cache,$out" >> "$RESULTS"
+
+  echo "Running size $s (batch)"
+  out=$(./Code/batch $s)
+  echo "$s,batch,$out" >> "$RESULTS"
+
+  echo "Running size $s (pool)"
+  out=$(./Code/pool $s)
+  echo "$s,pool,$out" >> "$RESULTS"
+done
+
+echo "Done. CSV saved to $RESULTS"
