@@ -1,4 +1,3 @@
-# research-papers
 # Operations on Linked Lists: Performance Optimization Strategies and Memory Management in Resource-Constrained Environments
 
 📄 This repository contains the research paper and supplementary materials for my study on **linked list operations**, with a focus on **performance optimization** and **memory management** in **resource-constrained environments**.
