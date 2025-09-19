@@ -14,7 +14,7 @@ Benchmarking shows that thoughtful implementation choices can improve execution 
 ## 📂 Repository Contents
 - `Linked_List_Research_Paper.pdf` – Full research paper (IEEE style)  
 - `Code/` – Implementations in C (standard, cache-optimized, batch, and memory-pooled versions)  
-- `Results/` – Benchmarking data, graphs, and performance analysis  
+- `Results/` – Benchmarking data and performance analysis  
 - `README.md` – Project overview (this file)  
 
 ---
